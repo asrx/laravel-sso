@@ -17,6 +17,11 @@ return [
     'cache_prefix' => 'laravel.sso.',
 
     /**
+     * expires time
+     */
+    'ttl' => 7200,
+    
+    /**
      * Redirect to this address when after SSO login.
      */
     'redirect' => env('APP_URL')

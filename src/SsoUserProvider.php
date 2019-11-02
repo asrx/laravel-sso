@@ -41,6 +41,6 @@ class SsoUserProvider extends DatabaseUserProvider
      */
     public function validateCredentials(UserContract $user, array $credentials)
     {
-        return  Cache::pull(config('sso.cache_prefix') . $credentials['ticket']);
+        return  Cache::get(config('sso.cache_prefix') . $credentials['ticket']);
     }
 }
